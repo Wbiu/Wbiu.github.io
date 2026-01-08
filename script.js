@@ -2,10 +2,20 @@ document.getElementById("btn").addEventListener("click", () => {
   alert("It works!");
 });
 
-if (!("gpu" in navigator)) {
-  document.body.innerHTML = "WebGPU not supported here — try Chrome/Edge or enable it in your browser.";
-} else {
+async function initWebGPU() {
+  if (!("gpu" in navigator)) {
+    console.log("WebGPU not supported");
+    return;
+  }
+
   const adapter = await navigator.gpu.requestAdapter();
-  const device = await adapter?.requestDevice();
+  if (!adapter) {
+    console.log("No GPU adapter available");
+    return;
+  }
+
+  const device = await adapter.requestDevice();
   console.log("WebGPU ready:", !!device);
 }
+
+initWebGPU();
