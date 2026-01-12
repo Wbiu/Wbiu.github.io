@@ -1,18 +1,347 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My GitHub Pages site</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="wrap">
-      <h1>Hello 👋</h1>
-      <p>This is hosted on GitHub Pages.</p>
-      <button id="btn">Click me</button>
-    </main>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio S.Wilet</title>
+  <meta name="description" content="Developer portfolio" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-    <script src="script.js"></script>
-  </body>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <span class="brandMark"></span>
+      <span class="brandText">Sitthichai Wilet</span>
+    </a>
+
+
+    <nav class="nav" id="nav">
+      <a href="#project-1">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="hero">
+ 
+    <div class="heroBg"></div>
+    <div class="heroOverlay"></div>
+
+    <div class="heroContent">
+      <div class="heroKicker">SYSTEM STATUS: <span class="ok">ONLINE</span></div>
+      <h1 class="heroTitle">SOFTWARE DEVELOPER</h1>
+      <p class="heroSub">
+       Application • Backend • Embedded Systems • Computer Graphics (Vulkan/OpenGL)
+      </p>
+
+      <div class="heroActions">
+        <a class="btn primary" href="#project-1">VIEW WORK</a>
+        <a class="btn" href="#about">ABOUT</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- PROJECT 01 (full-screen slide) -->
+    <section id="project-1" class="slide afterHero">
+      <div class="slideBg slideBg1"></div>
+      <div class="slideOverlay"></div>
+  
+      <div class="wrap">
+        <div class="sectionHead">
+          <h2 class="sectionTitle">LATEST WORK</h2>
+          <div class="rule"></div>
+        </div>
+  
+        <div class="feature">
+          <div class="panel projectCard">
+            <h3 class="panelTitle">PROJECT 01</h3>
+            <h3 class="projectName">Custom Virtualized Geometry Renderer</h3>
+  
+            <p class="muted">
+              A custom Virtualized Geometry LOD Rendering Engine : cluster-based real-time mesh simplification and LOD streaming system inspired by UE5's Nanite. This engine dynamically switches between multiple Levels of Detail using a virtualized geometry hierarchy, supporting view-dependent streaming and cluster-based simplification.
+            </p>
+  
+            <ul class="chips">
+              <li>Application</li>
+              <li>Renderer</li>
+              <li>Nanite</li>
+              <li>Dynamic LOD</li>
+            </ul>
+  
+            <div class="links">
+              <a href="https://github.com/Wbiu/WVR-Glove-Wiki" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+  
+        <div class="mediaBlock scrollSwap" id="p1-media">
+          <div class="frame isKeyed">
+            <div class="mediaStack">
+              <img
+                class="mediaItem isActive"
+                src="assets/media/cluster.gif"
+                alt="Cluster debug view"
+                data-media="cluster"
+                loading="lazy"
+              />
+              <img
+                class="mediaItem"
+                src="assets/media/triangle.gif"
+                alt="Triangle debug view"
+                data-media="triangle"
+                loading="lazy"
+              />
+              <img
+              class="mediaItem"
+              src="assets/media/raytracing.gif"
+              alt="Raytracing debug view"
+              data-media="raytracing"
+              loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="thumbRow">
+            <div class="thumbRail">
+              <button type="button" class="thumb isActive" data-media="cluster" aria-pressed="true">
+                Clusters
+              </button>
+              <button type="button" class="thumb" data-media="triangle" aria-pressed="false">
+                Triangles
+              </button>
+              <button type="button" class="thumb" data-media="raytracing" aria-pressed="false">
+                Raytracing
+              </button>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+  
+    <!-- PROJECT 02 (full-screen slide) -->
+    <section id="project-2" class="slide">
+      <div class="slideBg slideBg2"></div>
+      <div class="slideOverlay"></div>
+
+  
+      <div class="wrap">
+        <div class="sectionHead">
+          <h2 class="sectionTitle">PREVIOUS</h2>
+          <div class="rule"></div>
+        </div>
+  
+        <div class="feature reverse">
+          <div class="panel projectCard">
+            <h3 class="panelTitle">PROJECT 02</h3>
+            <h3 class="projectName">WVR Glove</h3>
+  
+            <p class="muted">
+              A Custom developed VR Force Feedback Glove, for Simulations • VR-Games • Training • Medical • Robotic • etc.
+            </p>
+  
+            <ul class="chips">
+              <li>VR</li>
+              <li>Embedded</li>
+              <li>Force Feedback</li>
+              <li>CAD</li>
+              <li>3D-Print</li>
+            </ul>
+  
+            <div class="links">
+              <a href="https://github.com/Wbiu/WVR-Glove-Wiki" target="_blank" rel="noopener">GitHub</a>
+              <span class="sep">•</span>
+              <a href="https://www.youtube-nocookie.com/embed/g4SqNAd-m4E" target="_blank" rel="noopener">YouTube</a>
+            </div>
+          </div>
+  
+          <div class="frame short">
+            <iframe
+              class="ytEmbed"
+              src="https://www.youtube-nocookie.com/embed/g4SqNAd-m4E"
+              title="Project 02 demo (YouTube Short)"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ABOUT -->     
+ <section id="about" class="section">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">About</h2>
+        <div class="rule"></div>
+      </div>
+
+
+      <div class="aboutGrid">
+        <div class="panel about">
+          <p>
+            Hi 👋,
+          </p>
+          <p>
+          I’m a software developer with a Master’s in Software Engineering. Curious by nature, driven by new challenges, and I enjoy building technology that makes things better for the future.
+          </p>
+        </div>
+
+        <div class="panel profileCard">
+          <img class="profilePic" src="assets/media/pfp.png" alt="Sitthichai Wilet" loading="lazy" />
+          <div class="profileName">Sitthichai Wilet</div>
+        </div>
+      </div>
+
+
+    
+      <!-- Skills -->
+      <div class="panel">
+        <h3 class="panelTitle">TOP SKILLS</h3>
+
+        <ul class="skillList">
+          <li class="skillItem lvl4">
+            <span class="skillName">C++</span>
+            <span class="skillcomment">Backend • ApplicationDevelopment</span>
+            <span class="skillMeter" role="img" aria-label="C++: 4 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl4">
+            <span class="skillName">C#</span>
+            <span class="skillcomment">Backend • ApplicationDevelopment</span>
+            <span class="skillMeter" role="img" aria-label="C# 4 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl4">
+            <span class="skillName">Java</span>
+            <span class="skillcomment">Backend • ApplicationDevelopment</span>
+            <span class="skillMeter" role="img" aria-label="Java 4 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl3">
+            <span class="skillName">Python</span>
+            <span class="skillcomment">AI • SQL Application</span>
+            <span class="skillMeter" role="img" aria-label="Python 4 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl4">
+            <span class="skillName">SQL</span>
+            <span class="skillcomment">Database</span>
+            <span class="skillMeter" role="img" aria-label="SQL 4 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl3">
+            <span class="skillName">Cisco</span>
+            <span class="skillcomment">NetworkingEngineer • Security</span>
+            <span class="skillMeter" role="img" aria-label="Cisco 3 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl3">
+            <span class="skillName">ESP32</span>
+            <span class="skillcomment">Custom Force Feedback VR-Glove</span>
+            <span class="skillMeter" role="img" aria-label="ESP32 3 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl3">
+            <span class="skillName">Vulkan/OpenGL</span>
+            <span class="skillcomment">Rendering Engine</span>
+            <span class="skillMeter" role="img" aria-label="Vulkan/OpenGL 3 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl3">
+            <span class="skillName">Unreal Engine 5</span>
+            <span class="skillcomment">VR-Games • FPS Games</span>
+            <span class="skillMeter" role="img" aria-label="UnrealEngine5 3 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl3">
+            <span class="skillName">CAD</span>
+            <span class="skillcomment">Basic Sketching</span>
+            <span class="skillMeter" role="img" aria-label="CAD 3 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+
+          <li class="skillItem lvl4">
+            <span class="skillName">Electrical Engineering</span>
+            <span class="skillcomment">VR Glove</span>
+            <span class="skillMeter" role="img" aria-label="CAD 4 out of 5">
+              <i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+       <!-- Hobbies -->
+      <div class="panel">
+        <h3 class="panelTitle">Hobbies</h3>
+          <ul class="hobbylist">
+            <li class="hobby"> Piano </li>
+            <li class="hobby"> Badminton </li>
+            <li class="hobby"> Drawing </li>
+            <li class="hobby"> Gaming </li>
+            <li class="hobby"> Bass Guitar </li>
+          </ul>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="sectionHead">
+      <h2 class="sectionTitle">CONTACT</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="panel contact">
+      <a class="btn primary" href="mailto:biu1999@hotmail.com">biu1999@hotmail.com</a>
+      <div class="links">
+        <a href="https://github.com/Wbiu" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="sep">•</span>
+        <a href="https://www.linkedin.com/in/sitthichai-wilet-a3b541394" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="muted">© <span id="year"></span> Sitthichai Wilet</span>
+  </div>
+</footer>
+
+  <button id="toTop" class="toTop" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"></path>
+  </svg>
+  </button>
+
+  <script src="./script.js"></script>
+</body>
 </html>
