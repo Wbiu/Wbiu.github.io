@@ -252,7 +252,7 @@ if (menuBtn && nav) {
             return;
         }
 
-        // Not locked yet: if we just arrived at the section, snap + lock + start scrubbing
+      
         if (shouldStartLock(dy)) {
             e.preventDefault();
             snapSectionUnderTopbar();
