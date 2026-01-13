@@ -866,7 +866,6 @@ padding: 120px 0 130px;}
   /* lamp the long description so the whole row doesn't grow too tall */
   #project-1 .projectCard .muted{
     display: -webkit-box;
-    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
