@@ -866,27 +866,44 @@ padding: 120px 0 130px;}
   /* lamp the long description so the whole row doesn't grow too tall */
   #project-1 .projectCard .muted{
     display: -webkit-box;
-    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 }
 
+/* Project 02: two Shorts side-by-side, auto-sized */
+#project-2 .shortsRow{
+  display:flex;
+  gap: 14px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+}
 
 #project-2 .frame.short{
-
+ 
   --reserved: 280px;
   --maxH: calc(100vh - var(--reserved));
+  --gap: 14px;
 
   width: min(
-    clamp(240px, 26vw, 420px),
-    calc(var(--maxH) * 9 / 16)
+    clamp(220px, 22vw, 420px),          /* normal responsive width */
+    calc(var(--maxH) * 9 / 16),         /* height-based cap for 9:16 */
+    calc((100% - var(--gap)) / 2)       /* ensure two fit side-by-side */
   );
 
   aspect-ratio: 9 / 16;
+  flex: 0 1 auto;
 }
 
 #project-2 .frame.short iframe{
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 980px){
+  #project-2 .shortsRow{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
