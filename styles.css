@@ -881,11 +881,9 @@ padding: 120px 0 130px;}
 }
 
 #project-2 .frame.short{
- 
   --reserved: 280px;
   --maxH: calc(100vh - var(--reserved));
   --gap: 14px;
-
   width: min(
     clamp(220px, 22vw, 420px),          /* normal responsive width */
     calc(var(--maxH) * 9 / 16),         /* height-based cap for 9:16 */
