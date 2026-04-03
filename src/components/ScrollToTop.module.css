@@ -1,0 +1,61 @@
+.scrollWrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+}
+
+.topButton {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(100%) brightness(120%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(100%) brightness(120%);
+
+    box-shadow:
+        0 10px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.topButton:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.5);
+    filter: brightness(2) contrast(1.1) saturate(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.topButton {
+    animation: fadeIn 0.3s ease-out;
+}

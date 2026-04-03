@@ -1,0 +1,391 @@
+section {
+    justify-content: center;
+}
+
+.rederer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    min-height: 100vh;
+    padding: 70px 10%;
+}
+
+
+.redererdsc {
+    flex: 1.2;
+    max-width: 600px;
+    position: relative;
+    color: white;
+    padding: 10px 30px;
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    box-shadow:
+        0 10px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+
+    border-radius: 30px;
+}
+
+.redererdsc::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+
+    pointer-events: none;
+    z-index: 2;
+}
+
+.media {
+    flex: 2.5;
+    display: flex;
+    position: relative;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+    padding: 30px 30px;
+
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    box-shadow:
+        0 10px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+    border-radius: 30px;
+}
+
+.media::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.mediacontainer {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+
+    aspect-ratio: 9 / 16;
+
+    border-radius: 24px;
+    margin: 0 2%;
+
+    border: 1px solid rgba(0, 0, 0, 0.4);
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.mediahero {
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+
+    border-radius: 30px;
+}
+
+
+.mediacontainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.mediaItem {
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.8) contrast(1.2) saturate(1.1);
+    transition: filter 0.3s ease;
+
+}
+
+.mediahero:hover {
+    transform: translateY(-2px);
+}
+
+.mediacontainer:hover .mediaItem {
+    filter: brightness(1) contrast(1.1) saturate(1.2);
+}
+
+
+.mediahero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .rederer {
+        flex-direction: column;
+    }
+}
+
+.glove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    min-height: 50vh;
+    padding: 70px 10%;
+}
+
+.glovedsc {
+    flex: 1.2;
+    max-width: 430px;
+    color: white;
+    padding: 30px 30px;
+    position: relative;
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+
+    border-radius: 30px;
+}
+
+.glovedsc::after {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+
+    pointer-events: none;
+    z-index: 2;
+
+}
+
+.shortsRow {
+
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 2% 2%;
+    flex: 1;
+
+    max-height: 700px;
+    min-height: 250px;
+
+    min-width: 250px;
+    max-width: 700px;
+
+    aspect-ratio: 9 / 16;
+
+    border-radius: 24px;
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    box-shadow:
+        0 10px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+
+    border-radius: 30px;
+
+}
+
+.ytEmbed {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: inherit;
+}
+
+
+
+.short {
+    flex: 2.5;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+    padding: 2% 1%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.short::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.viewproj {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 5%;
+
+}
+
+.viewrenderer {
+    position: relative;
+    display: inline-flex;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 24px;
+    padding: 10px 20px;
+    text-decoration: none;
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    box-shadow:
+        0 10px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+
+    cursor: pointer;
+}
+
+
+.viewrenderer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+.projectoverview {
+    justify-content: space-between;
+}

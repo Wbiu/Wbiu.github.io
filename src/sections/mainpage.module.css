@@ -1,0 +1,245 @@
+.main {
+    padding: 0 8%;
+}
+
+.greet {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 1000px;
+}
+
+.hero_text {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: transparent;
+    margin-bottom: 1%;
+    z-index: 5;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.85),
+            rgba(180, 200, 255, 0.8),
+            rgba(200, 180, 255, 0.85),
+            rgba(140, 180, 255, 0.8));
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    filter: drop-shadow(0 0 6px rgba(120, 181, 255, 0.5)) drop-shadow(0 0 12px rgba(180, 120, 255, 0.5));
+
+}
+
+
+
+.hero_text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.4),
+            transparent 50%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    mix-blend-mode: overlay;
+    pointer-events: none;
+
+}
+
+.hero_text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.08);
+    font-size: clamp(32px, 5vw, 64px);
+}
+
+.sub_text {
+    color: white;
+    font-weight: 400;
+    max-width: 800px;
+    z-index: 5;
+}
+
+.intro {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+}
+
+.profileCard {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: clamp(500px, 90vw, 600px);
+    padding: clamp(12px, 2vw, 50px);
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+
+    /* 4. The Edge & Shadow */
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+
+    border-radius: 22px;
+}
+
+
+.profileCard::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.profilePic {
+    width: clamp(80px, 10vw, 140px);
+    height: clamp(80px, 10vw, 140px);
+    border-radius: 999px;
+    object-fit: cover;
+    border: 1px solid rgba(130, 190, 255, .35);
+    box-shadow: 0 0 22px rgba(130, 190, 255, .18);
+}
+
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .profileCard {
+        width: 100%;
+    }
+}
+
+.heading {
+    display: flex;
+    color: white;
+}
+
+.profileCardText {
+    color: white;
+    flex: 1;
+    display: block;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.subbuttons {
+    justify-content: space-evenly;
+}
+
+.subbutton {
+    position: relative;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    margin-right: 10%;
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    box-shadow:
+        0 10px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    pointer-events: auto;
+    border-radius: 30px;
+}
+
+.subbutton:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    filter: brightness(2) contrast(1.1) saturate(1.2);
+}
+
+.subbutton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.subinfos {
+    display: inline-flex;
+    padding: 5% 0;
+    justify-content: space-between;
+    font-size: smaller;
+}
+
+.subinfo {
+    position: relative;
+    color: white;
+    padding: 4%;
+    min-width: 1vh;
+    max-width: 15vh;
+    backdrop-filter: blur(50px) saturate(250%) contrast(100%) brightness(120%);
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(100%) brightness(120%);
+
+    box-shadow:
+        0 10px 40px 0 rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
+
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
+    border-radius: 25px;
+
+}
+
+.subinfo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.icon {
+    font-size: 1rem;
+    color: #ffffff;
+}

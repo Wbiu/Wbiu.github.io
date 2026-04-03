@@ -1,0 +1,69 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.outro {
+    text-align: center;
+    margin-bottom: 80px;
+    z-index: 5;
+}
+
+.thanks {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 800;
+    background: linear-gradient(to right, #00e463, #00fbff, #9d49f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.glassBar {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+
+    backdrop-filter: blur(10px) saturate(250%) contrast(110%) brightness(100%);
+    -webkit-backdrop-filter: blur(10px) saturate(250%) contrast(110%) brightness(100%);
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) border-box;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+
+    pointer-events: auto;
+
+    border-radius: 30px;
+}
+
+.glassBar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.barContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
