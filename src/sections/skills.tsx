@@ -18,7 +18,7 @@ export default function skill() {
 
                 <div className={styles.skillcard}>
                     <div>
-                        <h1 className={styles.skillhero}>Techinical Skills</h1>
+                        <h1 className={styles.skillhero}>Technical Skills</h1>
                     </div>
                     <ul className={styles.skilllist}>
                         <li className={styles.skillitem}>C++</li>

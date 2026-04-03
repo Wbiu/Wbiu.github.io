@@ -24,7 +24,7 @@ export default function projects() {
                     </div>
                     <div className={styles.viewproj}>
                         <a href="https://github.com/Wbiu/Custom-Virtualized-Geometry-Renderer" type="button" className={styles.viewrenderer} > View Project in <FiGithub /></a>
-                        <GitHubStar owner="wbiu" repo="Custom-Virtualized-Geometry-Renderer" />
+                        <GitHubStar owner="wbiu" repo="Custom-Virtualized-Geometry-Renderer"   />
                     </div>
                 </div>
 
