@@ -1,5 +1,5 @@
 import { useRef, useCallback, useEffect, type ReactNode } from 'react';
-import './Borderglow.css';
+import './BorderGlow.css';
 
 interface BorderGlowProps {
   children?: ReactNode;
