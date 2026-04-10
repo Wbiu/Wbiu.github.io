@@ -78,7 +78,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: clamp(20%,1%, 30%);
-    height: clamp(25%,80%, 100%);
+    height: clamp(25%,90%, 100%);
     padding: 1%;
 
     -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
