@@ -6,9 +6,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    flex-wrap: wrap;
+    gap: 2%;
     min-height: 100vh;
-    padding: 70px 10%;
+    margin: auto auto;
+    width: 90%;
 }
 
 
@@ -18,9 +20,9 @@ section {
     position: relative;
     color: white;
     padding: 10px 30px;
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
 
     backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
-    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
 
     box-shadow:
         0 10px 40px 0 rgba(0, 0, 0, 0.3),
@@ -61,18 +63,16 @@ section {
 }
 
 .media {
-    flex: 2.5;
     display: flex;
     position: relative;
     align-items: stretch;
     justify-content: center;
     gap: 20px;
     height: auto;
-    padding: 30px 30px;
+    padding: 1.5% 1.5%;
 
-
-    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
     -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
 
     box-shadow:
         0 10px 40px 0 rgba(0, 0, 0, 0.3),
@@ -125,13 +125,15 @@ section {
     background: rgba(0, 0, 0, 0.2);
 }
 
+
+
 .mediahero {
     text-align: center;
     color: white;
     margin-top: 5%;
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
 
     backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
-    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
 
     background:
         linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
@@ -219,8 +221,9 @@ section {
     color: white;
     padding: 30px 30px;
     position: relative;
-    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
     -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
     background:
         linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) padding-box,
         linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05)) border-box;
@@ -259,6 +262,7 @@ section {
     position: relative;
     overflow: hidden;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 2% 2%;
     flex: 1;
 
@@ -271,8 +275,9 @@ section {
     aspect-ratio: 9 / 16;
 
     border-radius: 24px;
-    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
     -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
 
     box-shadow:
         0 10px 40px 0 rgba(0, 0, 0, 0.3),
@@ -293,7 +298,7 @@ section {
 }
 
 .ytEmbed {
-    width: 100%;
+    width: min(400px, 100%);
     height: 100%;
     border: none;
     border-radius: inherit;
@@ -330,9 +335,11 @@ section {
     z-index: 2;
 }
 
-.viewproj {
-    display: flexbox;
-    padding: 5% 5%;
+.viewproj{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2% 2%;
 }
 
 .viewrenderer {
@@ -344,8 +351,9 @@ section {
     padding: 10px 20px;
     margin:8px;
     text-decoration: none;
-    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
     -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
+
+    backdrop-filter: blur(50px) saturate(250%) contrast(110%) brightness(100%);
 
     box-shadow:
         0 10px 40px 0 rgba(0, 0, 0, 0.3),

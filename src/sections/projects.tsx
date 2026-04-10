@@ -23,8 +23,10 @@ export default function projects() {
                         </p>
                     </div>
                     <div className={styles.viewproj}>
-                        <a href="https://github.com/Wbiu/Custom-Virtualized-Geometry-Renderer" type="button" className={styles.viewrenderer} > View Project in <FiGithub /></a>
-                        <GitHubStar owner="wbiu" repo="Custom-Virtualized-Geometry-Renderer"   />
+                        <div>
+                            <a href="https://github.com/Wbiu/Custom-Virtualized-Geometry-Renderer" type="button" className={styles.viewrenderer} > View Project in <FiGithub /></a>
+                            <GitHubStar owner="wbiu" repo="Custom-Virtualized-Geometry-Renderer" />
+                        </div>
                     </div>
                 </div>
 
@@ -89,7 +91,7 @@ export default function projects() {
                         <a href="https://github.com/Wbiu/WVR-Glove-Wiki" type="button" className={styles.viewrenderer} > View Project in <FiGithub /></a>
                     </div>
                 </div>
-                
+
                 <div className={styles.shortsRow}>
                     <div className={styles.short}>
                         <iframe

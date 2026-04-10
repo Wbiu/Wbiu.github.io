@@ -6,16 +6,14 @@
   --border-radius: 28px;
   --glow-padding: 40px;
   --cone-spread: 25;
-
+  --border-radius: 30px;
+  
   position: relative;
   border-radius: var(--border-radius);
   isolation: isolate;
   transform: translate3d(0, 0, 0.01px);
   display: grid;
   border: 1px solid rgb(255 255 255 / 15%);
-
-
-  
 
   background: var(--card-bg, #060010);
   overflow: visible;

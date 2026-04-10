@@ -11,9 +11,9 @@
     height: 50px;
     border-radius: 50%;
 
+    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(100%) brightness(120%);
 
     backdrop-filter: blur(50px) saturate(250%) contrast(100%) brightness(120%);
-    -webkit-backdrop-filter: blur(50px) saturate(250%) contrast(100%) brightness(120%);
 
     box-shadow:
         0 10px 40px 0 rgba(0, 0, 0, 0.3),

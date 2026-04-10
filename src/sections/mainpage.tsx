@@ -7,16 +7,15 @@ import imgPfp from '../assets/media/pfp.png';
 
 export default function Mainpage() {
 
-    const scrollToSection = (id : string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     return (
         <section id="main" className={styles.main}>
-
             <div className={styles.intro}>
                 <div className={styles.greet}>
                     <p className={styles.hero_text}>
@@ -28,8 +27,8 @@ export default function Mainpage() {
                     </p>
 
                     <div className={styles.subbuttons} >
-                        <button type="button" onClick={() => scrollToSection("project")} className={styles.subbutton}>View My Works <FaCode className={styles.icon}/></button>
-                        <button type="button" onClick={() => scrollToSection("contact")} className={styles.subbutton}>Get In Touch <IoIosSend className={styles.icon}/> </button>
+                        <button type="button" onClick={() => scrollToSection("project")} className={styles.subbutton}>View My Works <FaCode className={styles.icon} /></button>
+                        <button type="button" onClick={() => scrollToSection("contact")} className={styles.subbutton}>Get In Touch <IoIosSend className={styles.icon} /> </button>
                     </div>
                     <div className={styles.subinfos}>
                         <div className={styles.subinfo}>
@@ -60,35 +59,21 @@ export default function Mainpage() {
 
                     </div>
                 </div>
-                <BorderGlow
-                    backgroundColor="transparent"
-                    edgeSensitivity={20}
-                    glowColor="210 80 80"
-                    borderRadius={24}
-                    glowRadius={30}
-                    glowIntensity={1.5}
-                    fillOpacity={0}
-                    coneSpread={1}
-                    colors={['#8000ff', '#ff00ea', '#00ddff']}>
-                    <div className={styles.profileCard}>
-                        <img className={styles.profilePic} src={imgPfp} alt="Sitthichai Wilet" loading="lazy" />
-                        <div>
-                            <h1 className={styles.heading}>
-                                About me
-                            </h1>
-                            <p className={styles.profileCardText}>
 
-                                I'm a passionate Software Developer with a Master's degree experienced in developing Application, Rendering Engine,
-                                Embedded System, Front and Backend. I love new challenges and turn complex problems into simple, beautyful and
-                                intiotive solutions
-                            </p>
-                        </div>
-
+                <div className={styles.profileCard}>
+                    <img className={styles.profilePic} src={imgPfp} alt="Sitthichai Wilet" loading="lazy" />
+                    <div>
+                        <h1 className={styles.heading}>
+                            About me
+                        </h1>
+                        <p className={styles.profileCardText}>
+                            I'm a passionate Software Developer with a Master's degree experienced in developing Application, Rendering Engine,
+                            Embedded System, Front and Backend. I love new challenges and turn complex problems into simple, beautyful and
+                            intiotive solutions
+                        </p>
                     </div>
-                </BorderGlow>
-
+                </div>
             </div>
-
         </section >
     );
 }

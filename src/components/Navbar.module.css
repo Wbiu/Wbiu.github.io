@@ -2,20 +2,23 @@
     position: relative;
     display: inline-flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
+    gap: 5%;
     padding: 1%;
-    margin-top: 5vh;
+    margin: 1% 0;
     border-radius: 35px;
-    border-color: rgba(255, 255, 255, 0.2);
+    width: 40vw;
+    -webkit-backdrop-filter: blur(0px) saturate(250%) contrast(110%) brightness(100%);
 
     backdrop-filter: blur(0px) saturate(250%) contrast(110%) brightness(100%);
-    -webkit-backdrop-filter: blur(0px) saturate(250%) contrast(110%) brightness(100%);
 
     box-shadow:
         0 10px 40px 0 rgba(0, 0, 0, 0.3),
         inset 0 0 20px rgba(255, 255, 255, 0.1),
         inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+        
     background:
         linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)) padding-box,
         linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) border-box;
@@ -46,23 +49,15 @@
 .section {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    margin: 25px;
 }
 
 .author {
     color: rgb(255, 255, 255);
-    margin-right: 15vw;
-    margin-left: 2vw;
-    font-size: 20px;
-}
-
-ul li span {
-    color: rgb(255, 255, 255);
-    margin-right: 15vw;
-    font-size: 20px;
+    font-size: larger;
 }
 
 .nav {
     display: flex;
     justify-content: center;
 }
+
